@@ -1,3 +1,52 @@
 == Bibliography
 
 [bibliography]
+* [[[GH-React]]]
+Github project page of the React library,
+retrieved on 2017-05-15
+from https://github.com/facebook/react.
+Archived at http://web.archive.org/web/20170515141250/https://github.com/facebook/react.
+* [[[GH-ng]]]
+Github project page of the Angular framework,
+retrieved on 2017-05-15
+from https://github.com/angular/angular.
+Archived at http://web.archive.org/web/20170515141421/https://github.com/angular/angular.
+* [[[GH-ngjs]]]
+Github project page of the AngularJS framework,
+retrieved on 2017-05-15
+from https://github.com/angular/angular.js.
+Archived at http://web.archive.org/web/20170515141425/https://github.com/angular/angular.js.
+* [[[GH-Vue]]]
+Github project page of the Vue.js framework,
+retrieved on 2017-05-15
+from https://github.com/vuejs/vue.
+Archived at http://web.archive.org/web/20170515141530/https://github.com/vuejs/vue.
+* [[[GH-Ember]]]
+Github project page of the Ember.js framework,
+retrieved on 2017-05-15
+from https://github.com/emberjs/ember.js.
+Archived at http://web.archive.org/web/20170515142927/https://github.com/emberjs/ember.js.
+* [[[GH-Bckbn]]]
+Github project page of the Backbone.js framework,
+retrieved on 2017-05-15
+from https://github.com/jashkenas/backbone.
+Archived at http://web.archive.org/web/20170515144325/https://github.com/jashkenas/backbone.
+* [[[GH-Aur]]]
+Github project page of the Aurelia framework,
+retrieved on 2017-05-15
+from https://github.com/aurelia/framework.
+Archived at http://web.archive.org/web/20170515142932/https://github.com/aurelia/framework.
+* [[[GH-Sve]]]
+Github project page of the Svelte framework,
+retrieved on 2017-05-15
+from https://github.com/sveltejs/svelte.
+Archived at http://web.archive.org/web/20170515142936/https://github.com/sveltejs/svelte.
+* [[[GH-Cycle]]]
+Github project page of the Cycle.js framework,
+retrieved on 2017-05-15
+from https://github.com/cyclejs/cyclejs.
+Archived at http://web.archive.org/web/20170515142942/https://github.com/cyclejs/cyclejs.
+* [[[GTREND-EmberBckbn]]]
+Google Trends diagram on ember.js vs backbone.js,
+retrieved on 2017-05-15
+from https://trends.google.com/trends/explore?date=2010-05-16%202017-05-15&q=ember.js,backbone.js.

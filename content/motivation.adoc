@@ -1,5 +1,25 @@
 == Motivation
 
+As the evolution of web technologies enables single-page applications to become increasingly sophisticated,
+a multitude of open source frameworks emerge in the JavaScript ecosystem - community-driven,
+but sometimes also backed by large technology companies.
+
+At the time of writing,
+Facebook's React (66,685 Github stars <<GH-React>>),
+Google's Angular (24,022 Github stars <<GH-ng>>) and
+its predecessor AngularJS (55,744 Github stars <<GH-ngjs>>) as well as
+Vue.js (53,434 Github stars <<GH-Vue>>)
+are leaders in popularity, while others, often still in early stages,
+attempt to introduce distinct new concepts to the market. +
+Notable examples of these include
+Aurelia (9,507 Github stars <<GH-Aur>>) with its dedication to Web Components,
+Svelte (4,751 Github stars <<GH-Sve>>) with its approach using the compilation step to eliminate any runtime remainder of the framework and
+Cycle.js (6,491 Github stars <<GH-Cycle>>) with its somewhat radical functional and reactive programming model. +
+Some older and well-established ones, such as
+Ember.js (17,847 Github stars <<GH-Ember>>) and
+Backbone.js (26,307 Github stars <<GH-Bckbn>>),
+seem to lose momentum <<GTREND-EmberBckbn>> as their ideas are drifting towards being considered obsolete.
+
 === The rise of functional programming
 
 === Current development of functional reactive programming
