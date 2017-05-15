@@ -9,3 +9,5 @@ include::mvi.adoc[]
 include::cyclejs.adoc[]
 
 include::conclusion.adoc[]
+
+include::bibliography.adoc[]
