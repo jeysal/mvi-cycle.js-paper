@@ -83,3 +83,26 @@ Available at https://www.ecma-international.org/ecma-262/6.0/.
 "ECMAScript® Language Specification (5.1 Edition)",
 Ecma International, Geneva, Switzerland, 2011.
 Available at https://www.ecma-international.org/ecma-262/5.1/.
+* [[[CHR13]]]
+Ben Christensen, Jafar Husain,
+"Reactive Programming in the Netflix API with RxJava",
+Netflix Inc., Los Gatos, California, USA, 2013.
+Blog post available at http://web.archive.org/web/20170516092032/https://medium.com/netflix-techblog/reactive-programming-in-the-netflix-api-with-rxjava-7811c3a1496a.
+* [[[GH-Redux]]]
+Github project page of the Redux state management library,
+retrieved on 2017-05-16
+from https://github.com/reactjs/redux.
+Archived at http://web.archive.org/web/20170516092915/https://github.com/reactjs/redux.
+* [[[GH-MobX]]]
+Github project page of the MobX state management library,
+retrieved on 2017-05-16
+from https://github.com/mobxjs/mobx.
+Archived at http://web.archive.org/web/20170516093551/https://github.com/mobxjs/mobx.
+* [[[GRE16]]]
+Sascha Greif,
+"State of JavaScript survey", 2016.
+Survey results available at http://stateofjs.com/.
+* [[[GTREND-Elm]]]
+Google Trends diagram on Elm,
+retrieved on 2017-05-16
+from https://trends.google.com/trends/explore?q=%2Fm%2F0ncc1sv.
