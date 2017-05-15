@@ -1,0 +1,11 @@
+include::abstract.adoc[]
+
+include::motivation.adoc[]
+
+include::frp.adoc[]
+
+include::mvi.adoc[]
+
+include::cyclejs.adoc[]
+
+include::conclusion.adoc[]

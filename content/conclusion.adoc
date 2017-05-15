@@ -1,0 +1,5 @@
+== Conclusion
+
+=== The future of FRP in frontend development
+
+=== Evaluation of the MVI pattern

@@ -13,24 +13,4 @@
 Tim Seckinger
 Faculty of Computer Science - Fachhochschule Dortmund
 
-== Abstract
-
-== Motivation
-
-=== The rise of functional programming
-
-=== Current development of functional reactive programming
-
-== Introduction to functional reactive programming
-
-== Introduction to Model-View-Intent
-
-== The Cycle.js framework
-
-=== The MVI pattern in Cycle.js
-
-== Conclusion
-
-=== The future of FRP in frontend development
-
-=== Evaluation of the MVI pattern
+include::content/index.adoc[]

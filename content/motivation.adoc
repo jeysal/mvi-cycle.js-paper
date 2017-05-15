@@ -1,0 +1,5 @@
+== Motivation
+
+=== The rise of functional programming
+
+=== Current development of functional reactive programming
