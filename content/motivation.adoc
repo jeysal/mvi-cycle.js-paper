@@ -22,4 +22,16 @@ seem to lose momentum <<GTREND-EmberBckbn>> as their ideas are drifting towards 
 
 === The rise of functional programming
 
+While functional programming is not a new paradigm and it has been prominent in academia for decades,
+only recently adoption of its principles has found its way into practical applications in the software industry.
+
+WhatsApp Inc. is known to use the functional programming language Erlang for most of its high load message processing <<REE12>>.
+The hybrid OOP and functional language Scala has grown to large popularity <<OGR17>>
+and has frequently been used for implementing backend systems at Twitter, Inc. <<VEN09>> and Zalando SE <<KOP15>> among others.
+Even classic imperative and object-oriented languages have commonly adopted functional programming concepts
+into language features and their core libraries, such as industry heavyweight Java adopting lambda expressions
+and incorporating the Streams API into the platform <<GOE14>>, as well as the web's core language JavaScript
+supporting arrow functions as part of the ECMAScript® 2015 standard <<ECM15>> and earlier introducing typical collection operations
+including `map` and `filter` known from functional programming as of ECMAScript® 5.1 <<ECM11>>.
+
 === Current development of functional reactive programming

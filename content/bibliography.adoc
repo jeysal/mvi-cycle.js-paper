@@ -50,3 +50,36 @@ Archived at http://web.archive.org/web/20170515142942/https://github.com/cyclejs
 Google Trends diagram on ember.js vs backbone.js,
 retrieved on 2017-05-15
 from https://trends.google.com/trends/explore?date=2010-05-16%202017-05-15&q=ember.js,backbone.js.
+* [[[REE12]]]
+Rick Reed,
+"Scaling to Millions of Simultaneous Connections",
+presented at Erlang Factory, San Francisco Bay Area, California, USA, 2012.
+Slides available at http://web.archive.org/web/20170515204931/http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf.
+* [[[OGR17]]]
+Stephen O'Grady,
+"The RedMonk Programming Language Rankings: January 2017",
+RedMonk, Portlande, Maine, USA, 2017.
+Report available at http://web.archive.org/web/20170515205641/http://redmonk.com/sogrady/2017/03/17/language-rankings-1-17/.
+* [[[VEN09]]]
+Bill Venners,
+"Twitter on Scala - A Conversation with Steve Jenson, Alex Payne, and Robey Pointer",
+Artima, Inc., Mountain View, California, USA, 2009.
+Article available at http://web.archive.org/web/20170515210829/http://www.artima.com/scalazine/articles/twitter_on_scala.html.
+* [[[KOP15]]]
+Alexander Kops,
+"From Java to Scala in Less Than Three Months",
+presented at Scala Days, Amsterdam, Netherlands, 2015.
+Slides available at http://web.archive.org/web/20170515211336/https://www.slideshare.net/ZalandoTech/zalando-tech-from-java-to-scala-in-less-than-three-months.
+* [[[GOE14]]]
+Brian Goetz and Java Community Process contributors,
+"JSR-000335 Lambda Expressions for the Java^TM^ Programming Language",
+Oracle Corporation, Redwood City, California, USA, 2014.
+Available at https://jcp.org/aboutJava/communityprocess/final/jsr335/index.html.
+* [[[ECM15]]]
+"ECMAScript® 2015 Language Specification",
+Ecma International, Geneva, Switzerland, 2015.
+Available at https://www.ecma-international.org/ecma-262/6.0/.
+* [[[ECM11]]]
+"ECMAScript® Language Specification (5.1 Edition)",
+Ecma International, Geneva, Switzerland, 2011.
+Available at https://www.ecma-international.org/ecma-262/5.1/.
