@@ -58,3 +58,6 @@ but a general paradigm change taking over the ecosystem from all corners at once
 
 If functional reactive programming is the future of frontend web development - with Redux and RxJS being just early harbingers -
 how will we structure our code in future web applications? What will be the next MV* architecture once we are fully committed to FRP?
+
+After introducing basic functional reactive programming concepts and the Model-View-Intent architecture in the following sections of this paper,
+we will take a look at the MVI realization in the Cycle.js framework before closing with a conclusion and outlook.
