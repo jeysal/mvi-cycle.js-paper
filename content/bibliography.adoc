@@ -106,3 +106,32 @@ Survey results available at http://stateofjs.com/.
 Google Trends diagram on Elm,
 retrieved on 2017-05-16
 from https://trends.google.com/trends/explore?q=%2Fm%2F0ncc1sv.
+* [[[WH00]]]
+Zhanyong Wan, Paul Hudak,
+"Functional reactive programming from first principles",
+Yale University, New Haven, Connecticut, USA, 2000.
+Archived at http://web.archive.org/web/20170609160109/https://pdfs.semanticscholar.org/b3b5/59104528d31f7db7fbe208377abdc4a00e15.pdf.
+* [[[GH-RxJava]]]
+Github project page of the RxJava library,
+retrieved on 2017-06-10
+from https://github.com/ReactiveX/RxJava.
+Archived at http://web.archive.org/web/20170610141854/https://github.com/ReactiveX/RxJava.
+* [[[GH-RxSwift]]]
+Github project page of the RxSwift library,
+retrieved on 2017-06-10
+from https://github.com/ReactiveX/RxSwift.
+Archived at http://web.archive.org/web/20170610141951/https://github.com/ReactiveX/RxSwift.
+* [[[GH-RxJS]]]
+Github project page of the RxJS library,
+retrieved on 2017-06-10
+from https://github.com/ReactiveX/rxjs.
+Archived at http://web.archive.org/web/20170610142030/https://github.com/ReactiveX/rxjs.
+* [[[GTREND-Rx]]]
+Google Trends diagram on RxJava, RxSwift and RxJS,
+retrieved on 2017-06-10
+from https://trends.google.com/trends/explore?date=2013-06-10%202017-06-10&q=RxJava,RxSwift,RxJS.
+* [[[Rx-Intro]]]
+Introduction page to the ReactiveX collection of libraries,
+retrieved on 2017-06-11
+from http://reactivex.io/intro.html.
+Archived at http://web.archive.org/web/20170611122140/http://reactivex.io/intro.html.

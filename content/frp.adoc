@@ -1,1 +1,141 @@
-== Introduction to functional reactive programming
+== Functional reactive programming in imperative languages
+
+Functional reactive programming, commonly known as _FRP_,
+relies on the core concepts of _behaviors_ and _events_ <<WH00>>.
+The former represent values that change over time,
+while the latter occur in an instant and can optionally carry a value as well.
+Both behaviors and events can be combined by various operators to create
+new behaviors and events.
+A functional reactive program can arbitrarily apply these operators to
+existing behaviors and events as well as static values (that do not vary over time),
+generating new behaviors and emitting new events as its outputs <<WH00>>.
+
+But the widely-used programming languages at this time are mostly imperative,
+particularly in development of web frontends,
+where JavaScript dominates the market by a large margin.
+To translate the FRP paradigm to these languages and enable a programming style
+carrying its semantics, libraries have been created for a wide range of languages.
+The _ReactiveX_ collection (also known as _Reactive Extensions_) provides
+a set of libraries implementing _observable sequences_, notable
+RxJava (24,877 Github stars <<GH-RxJava>>),
+RxSwift (9,517 Github stars <<GH-RxSwift>>) and
+RxJS (6,630 Github stars <<GH-RxJS>>),
+which have become popular in recent years <<GTREND-Rx>>.
+It is debatable whether its model of observable sequences is actually a form of FRP,
+and ReactiveX does not claim to be strictly FRP because it only models values
+at discrete points in time <<Rx-Intro>>.
+Thus, the concept of behaviors is not truly represented in these implementations.
+Instead, observable sequences can be considered to only
+implement events in the original sense of FRP, not behaviors that vary continuously.
+What remains of the FRP fundamentals, however, is the notion of time being modeled
+explicitly in the program code as a form of input to the program.
+
+Observable sequences - short _observables_ - are data structures that can contain multiple values,
+like an _array_, but are at the same time asynchronous, like a _promise_ in JavaScript
+or similar concepts in other languages. Also like a promise, they are based on a _push_-semantic,
+meaning that they can be subscribed to and will then push arriving values to subscribers
+rather than constantly being polled for new values.
+
+[cols="4*"]
+.Imperative data structures
+|===
+h|
+h|1 value
+h|0..1 values
+h|0..* values
+
+h|sync, pull
+m|T
+m|T? / Optional<T>
+m|T[] / Array<T>
+
+h|async, push
+m|Callback<T>
+m|Promise<T>
+m|Observable<T>
+
+|===
+
+The source of data for the observables typically lies outside of their system at the boundary
+to the imperative world. Examples are a stream of mouse clicks or other events provided by the
+runtime environment (such as a browser), but also incoming packets from sockets or results
+of I/O operations. The library will usually provide utility functions to create observables
+from these. Another common data source is time itself, allowing the creation of observables
+that emit values at a certain interval or once after a certain delay.
+The sink of data that is pushed through these observables, comes in the form of subscribers
+that represent another boundary, where often times side effects are performed that, for instance,
+alter the state of the user interface, send HTTP requests or perform other I/O operations.
+
+The desired application logic can then be encoded by transforming and combining
+these streams of discrete-time events emitted by the data sources to other
+streams of discrete-time events that are consumed by the sinks in a pure, functional style,
+because side effects required by the fundamentally imperative environment have been extracted,
+segregated into inputs and outputs of the program and relocated to sources and sinks, respectively.
+The operators used to encode the desired logic on observables often resemble those known from
+the classic theory of functional reactive programming.
+
+[source,javascript]
+.An example of a timer implemented using observables
+----
+const reset$ = Rx.Observable
+  .fromEvent(resetButton, 'click') <1>
+  .startWith(null); <2>
+const second$ = reset$
+  .switchMap(() => Rx.Observable.interval(1000).startWith(-1)) <3>
+  .map(second => second + 1); <4>
+
+const freeze$ = Rx.Observable
+  .fromEvent(freezeButton, 'click') <5>
+  .startWith(false) <6>
+  .scan(freeze => !freeze); <7>
+
+const tick$ = Rx.Observable
+  .combineLatest(second$, freeze$, (second, freeze) => (freeze ? null : second)) <8>
+  .filter(second => second !== null); <9>
+
+tick$.subscribe(tick => (timeDisplay.innerText = tick)); <10>
+----
+<1> get an observable of clicks on the reset button
+<2> pretend it was initially clicked once to start the timer
+<3> for each click, generate a new observable with values -1, 0, 1, ... on seconds 0, 1, 2, ...
+<4> increase each value by 1 to match the seconds
+<5> get an observable of clicks on the freeze button
+<6> do not freeze initially
+<7> toggle freeze on each click
+<8> when the second changes or freeze is toggled, emit the current second (or `null` if frozen)
+<9> ignore null values, avoiding updates when frozen
+<10> change the displayed time whenever tick$ emits.
+
+The example code above implements a timer that ticks every second and can be reset by a button
+for a web page using the RxJS library.
+An additional button can be used to toggle the state of the display between
+active (always displaying the current second) and
+frozen (displaying the last second before being frozen).
+Number one and five are _user inputs_ to the program.
+Number three may not seem like an input at first, however,
+considering that we treat time as an explicit value in our system,
+the function given to `switchMap` depends the external property of time
+and is considered to be impure.
+Consequently, the function introduces a _temporal input_ in addition to the existing user inputs.
+The `tick$` observable in number ten is the single output of the program,
+because it is the only point where a subscription occurs to perform necessary side effects accordingly.
+
+Aside from the temporal input in number 3,
+the `scan` and `combineLatest` operators in number 7 and 8
+demonstrate the influence of the temporal input particularly well,
+since both operators are specific to observables.
+_Scan_ is similar to a _reduce_ operation on an array,
+but each intermediate value produced by reduction is also emitted on the output observable,
+at consecutive instants in time.
+The state of the operation - i.e. the result of the reduction so far,
+in this case the state of the timer, _active_ or _frozen_ -
+is abstracted away from the application code
+by being encapsulated in the library that implements the operator.
+_CombineLatest_ is similar to a _zip_ operation on multiple arrays,
+but it is not required for both input observables to emit values to zip together, instead,
+the latest value provided by each observable is saved
+to combine them with a new value emitted by any of the observables.
+Again, the application does not model its _state_ explicitly,
+but rather the _change_ over time that affects its outputs.
+In this case, we avoid storing the current elapsed seconds value in our code
+in spite of the possibility that we may need to render it if the timer gets unfrozen.
