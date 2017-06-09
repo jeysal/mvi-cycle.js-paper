@@ -83,7 +83,7 @@ Available at https://www.ecma-international.org/ecma-262/6.0/.
 "ECMAScript® Language Specification (5.1 Edition)",
 Ecma International, Geneva, Switzerland, 2011.
 Available at https://www.ecma-international.org/ecma-262/5.1/.
-* [[[CHR13]]]
+* [[[CH13]]]
 Ben Christensen, Jafar Husain,
 "Reactive Programming in the Netflix API with RxJava",
 Netflix Inc., Los Gatos, California, USA, 2013.

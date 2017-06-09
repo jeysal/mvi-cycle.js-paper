@@ -37,7 +37,7 @@ including `map` and `filter` known from functional programming as of ECMAScriptÂ
 === Current development of functional reactive programming
 
 Functional reactive programming is a less well-known and much more recent trend, but there are also cases where it has been successfully used
-for building large-scale systems, for instance parallel API request processing at Netflix, Inc. <<CHR13>>.
+for building large-scale systems, for instance parallel API request processing at Netflix, Inc. <<CH13>>.
 
 In web frontend development, reactive and mostly functional reactive programming has been getting a lot of attention over the past few years.
 In the React ecosystem, Redux (30,955 Github stars <<GH-Redux>>) is an immensely popular choice for application state management
