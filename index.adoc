@@ -11,6 +11,6 @@
 
 = Model-View-Intent frontend development with Cycle.js: Term Paper
 Tim Seckinger
-Faculty of Computer Science - Fachhochschule Dortmund
+Department of Computer Science - Fachhochschule Dortmund
 
 include::content/index.adoc[]
