@@ -74,8 +74,8 @@ segregated into inputs and outputs of the program and relocated to sources and s
 The operators used to encode the desired logic on observables often resemble those known from
 the classic theory of functional reactive programming.
 
-[source,javascript]
-.An example of a timer implemented using observables
+[#observable-timer,source,javascript]
+.{figure-caption} {counter:refnum}. An example of a timer implemented using observables
 ----
 const reset$ = Rx.Observable
   .fromEvent(resetButton, 'click') <1>
@@ -106,7 +106,9 @@ tick$.subscribe(tick => (timeDisplay.innerText = tick)); <10>
 <9> ignore null values, avoiding updates when frozen
 <10> change the displayed time whenever tick$ emits.
 
-The example code above implements a timer that ticks every second and can be reset by a button
+{counter2:refnum}
+
+<<observable-timer,{figure-caption} {refnum}>> implements a timer that ticks every second and can be reset by a button
 for a web page using the RxJS library.
 An additional button can be used to toggle the state of the display between
 active (always displaying the current second) and
