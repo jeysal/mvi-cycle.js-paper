@@ -1,1 +1,66 @@
 == Introduction to Model-View-Intent
+
+In modern web development, the classic _Model-View-Controller_ pattern does not have
+as much significance as it traditionally had in architecture of most applications for decades.
+The first major JavaScript framework, _AngularJS_, has a concept of _controllers_, however,
+they do not work like traditional controllers as popularized by MVC.
+Controversial debates about the architecture of AngularJS applications have taken place,
+often suggesting _Model-View-ViewModel (MVVM)_ as an appropriate backing concept,
+but ultimately, no classification could be applied in general.
+AngularJS lead developer Igor Minar has declared it to be _"Model-View-Whatever" (MVW / MV*)_
+in an effort to end debates in favor of framework users' freedom to follow any approach
+they deem benefical to their application architectures <<MIN12>>.
+
+In our reactive architecture, MVC cannot serve as the underlying pattern either,
+because the controller is a proactive component <<Cy-MVI>>.
+It manipulates the model and, in many interpretations, the view.
+A reactive approach needs to be oriented towards components that observe each other,
+establishing a unidirectional data flow contrary to the direction of observation.
+In _Model-View-Intent (MVI)_, we incorporate three components along the path of the data,
+
+1. the _intent_,
+2. the _model_ and
+3. the _view_.
+
+[#mvi-visualization]
+.Visualization of MVI <<STA15>>
+image::mvi-visualization.png[Visualization of MVI,400,align="center",caption="{figure-caption} {counter:refnum}. "]
+
+{counter2:refnum}
+
+The intent observes the user's mouse clicks and keypresses or other forms of input,
+and infers actions to be performed from them in terms of application logic,
+thus interpreting the user's _intent_ in giving the input. +
+The model holds the application state in its technical representation
+that can be processed by a computer.
+It observes the intent, adapting to incoming actions by transforming its state. +
+The view observes the model, rendering the application state visually
+and thus representing computer output in this architecture.
+
+<<mvi-visualization,{figure-caption} {refnum}>> also depicts the user as a fourth component in this model.
+The user observes the view and incrementally builds up his mental model whenever the view changes.
+MVI attempts to solve the same problem that MVC tried to solve in its 1970s origins,
+that is translation between human and computer models, in a way that is simple and feels natural.
+When including the user side of the application model, the symmetry of the concept becomes obvious <<STA15>>.
+Concerning symmetry about the vertical axis,
+the intent transforms user output to computer input,
+while the view transforms computer output to user input.
+
+More interestingly, concerning symmetry about the horizontal axis,
+the user holds information in his human representation,
+while the model holds information in its computer representation.
+Interaction between those occurs via the intent and view, respectively.
+They act like an event bus, transferring mouse clicks and screen depiction distributed over time <<STA15>>.
+
+Owing to this symmetry, the model can be altered to illustrate human-human-interaction
+in the same way it illustrates human-computer-interaction
+by replacing both mouse clicks and screen depiction with spoken words <<STA15>>.
+In the same way, the model can illustrate computer-computer-interaction between reactive systems
+via data packets sent over their event bus.
+
+Another useful property of the MVI architecture is that every component it essentially just
+a referentially transparent function over streams <<Cy-MVI>>.
+Intent, model and view could - in theory - be consolidated into a single function,
+although the split in those three components is indispensably useful for comprehensibility of a program.
+At the same time, they can advantageously be split up into an arbitrary amount of functions separated by concerns,
+enhancing clarity and facilitating composability of MVI programs.

@@ -135,3 +135,19 @@ Introduction page to the ReactiveX collection of libraries,
 retrieved on 2017-06-11
 from http://reactivex.io/intro.html.
 Archived at http://web.archive.org/web/20170611122140/http://reactivex.io/intro.html.
+* [[[MIN12]]]
+Igor Minar,
+blog post on "MVC vs MVVM vs MVP", 2012,
+retrieved on 2017-06-27
+from https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV.
+Archived at http://web.archive.org/web/20170627165705/https://plus.google.com/+IgorMinar/posts/DRUAkZmXjNV.
+* [[[Cy-MVI]]]
+Cycle.js documentation page on Model-View-Intent,
+retrieved on 2017-06-27
+from https://cycle.js.org/model-view-intent.html.
+Source code archived at https://github.com/cyclejs/cyclejs/blob/04a6369f62ac8b13f23b3985ead029ea362ee5bf/docs/content/documentation/model-view-intent.md.
+* [[[STA15]]]
+André "Staltz" Medeiros,
+"What if the user was a function?",
+presented at JSConf, Budapest, Hungary, 2015.
+Slides available at https://speakerdeck.com/staltz/what-if-the-user-was-a-function.
