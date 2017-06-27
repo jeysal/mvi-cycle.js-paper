@@ -34,14 +34,14 @@ and incorporating the Streams API into the platform <<GOE14>>, as well as the we
 supporting arrow functions as part of the ECMAScript® 2015 standard <<ECM15>> and earlier introducing typical collection operations
 including `map` and `filter` known from functional programming as of ECMAScript® 5.1 <<ECM11>>.
 
-=== Current development of functional reactive programming
+=== Current development of functional and reactive programming
 
-Functional reactive programming is a less well-known and much more recent trend, but there are also cases where it has been successfully used
+Functional and reactive programming is a less well-known and much more recent trend, but there are also cases where it has been successfully used
 for building large-scale systems, for instance parallel API request processing at Netflix, Inc. <<CH13>>.
 
-In web frontend development, reactive and mostly functional reactive programming has been getting a lot of attention over the past few years.
+In web frontend development, reactive and mostly functional and reactive programming has been getting a lot of attention over the past few years.
 In the React ecosystem, Redux (30,955 Github stars <<GH-Redux>>) is an immensely popular choice for application state management
-that, while not explicitly being marketed as functional and reactive, clearly takes lots of inspiration from the paradigm.
+that, while not explicitly being marketed as functional and reactive, clearly takes lots of inspiration from the paradigms.
 Its largest competitor, MobX (9,130 Github stars <<GH-MobX>>) claims to
 "make state management simple and scalable by transparently applying functional reactive programming" <<GH-MobX>>.
 
@@ -56,7 +56,7 @@ Overall, with functional and reactive concepts sneaking into the world of JavaSc
 we may very soon see not just the establishment of another fraction in the highly diverse and fragmented ecosystem of web applications,
 but a general paradigm change taking over the ecosystem from all corners at once.
 
-If functional reactive programming is the future of frontend web development - with Redux and RxJS being just early harbingers -
+If functional and reactive programming is the future of frontend web development - with Redux and RxJS being just early harbingers -
 how will we structure our code in future web applications? What will be the next MV* architecture once we are fully committed to FRP?
 
 After introducing basic functional reactive programming concepts and the Model-View-Intent architecture in the following sections of this paper,
