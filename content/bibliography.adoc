@@ -151,3 +151,27 @@ André "Staltz" Medeiros,
 "What if the user was a function?",
 presented at JSConf, Budapest, Hungary, 2015.
 Slides available at https://speakerdeck.com/staltz/what-if-the-user-was-a-function.
+* [[[Rx-Staltz]]]
+Github contributors graph of the RxJS library,
+retrieved on 2017-07-03
+from https://github.com/ReactiveX/rxjs/graphs/contributors.
+* [[[Cy-Driver]]]
+Cycle.js documentation page on drivers,
+retrieved on 2017-07-03
+from https://cycle.js.org/drivers.html.
+Source code archived at https://github.com/cyclejs/cyclejs/blob/04a6369f62ac8b13f23b3985ead029ea362ee5bf/docs/content/documentation/drivers.md.
+* [[[Cy-Tri]]]
+Cycle.js playground,
+retrieved on 2017-07-03
+from https://cyclejs.github.io/tricycle/.
+Source code archived at https://github.com/cyclejs/tricycle/tree/4c0f9a11644faf5aebaed55cc53698e9e9ad6fb2.
+* [[[Cy-Comp]]]
+Cycle.js documentation page on components,
+retrieved on 2017-07-03
+from https://cycle.js.org/components.html.
+Source code archived at https://github.com/cyclejs/cyclejs/blob/04a6369f62ac8b13f23b3985ead029ea362ee5bf/docs/content/documentation/components.md.
+* [[[Cy-SB]]]
+Github project page of the Cycle Sandbox library,
+retrieved on 2017-07-03
+from https://github.com/aronallen/cycle-sandbox.
+Archived at http://web.archive.org/web/20170703151949/https://github.com/aronallen/cycle-sandbox.

@@ -1,3 +1,91 @@
 == The Cycle.js framework
 
-=== The MVI pattern in Cycle.js
+_Cycle.js_ is a JavaScript framework created by André "Staltz" Medeiros,
+who has also been a frequent contributor to the RxJS library <<Rx-Staltz>>.
+It does not mandate use of the MVI architecture,
+but the concept of MVI has emerged in conjunction with Cycle.js and
+is beneficial to most Cycle.js applications,
+with those also being the single field where MVI has been applied so far.
+Cycle.js is lightweight when compared to large frameworks such as Angular and
+can be viewed as more of a tool to assist in creation of MVI applications <<STA15>>.
+
+Cycle.js aims to provide "a functional and reactive JavaScript framework for predictable code" <<GH-Cycle>>.
+It provides its core `run` function for use with the popular RxJS functional and reactive programming library
+as well as _Most.js_ and _xstream_, the latter of which has been developed primarily for Cycle.js.
+Utilities for DOM interaction, accessing other external resources such as HTTP requests
+and miscellaneous tooling are also available in separate packages.
+
+In the Cycle.js architecture, side effects of any kind are encapsulated in _drivers_ <<Cy-Driver>>.
+They listen to _sinks_ from the application code and provide _sources_ of data to the application code.
+Usually, data passed through the sources is based on previous sink output.
+For the DOM driver, the sink is a stream of DOM elements to render whenever the stream emits,
+and the sources are streams of events that subsequently originate from those elements.
+For the HTTP driver, the sink is a stream of HTTP requests to perform,
+and the sources are streams of the responses these requests induce.
+In the MVI data flow, drivers are located before the intent (sources) and after the view (sinks),
+interfacing with application code on one side and the external part of the system on the other -
+for instance the user in case of the DOM driver or another computer in case of the HTTP driver.
+
+With all side effects extracted to drivers, only one duty remains for the application code to fulfill:
+Mapping from provided sources to sinks according to the business logic of the desired program.
+<<cycle-example,{figure-caption} {counter:refnum}>> shows an example of a simple Cycle.js application
+that implements a counter using the DOM driver.
+
+[#cycle-example,source,javascript]
+.{figure-caption} {counter:refnum}. A simple counter written using Cycle.js <<Cy-Tri>>
+----
+function main (sources) { <1>
+  const add$ = sources.DOM
+    .select('.add') <2>
+    .events('click') <3>
+    .map(ev => 1); <4>
+
+  const count$ = add$.fold((total, change) => total + change, 0); <5>
+
+  return {
+    DOM: count$.map(count => <6>
+      div('.counter', [
+        'Count: ' + count,
+        button('.add', 'Add')
+      ])
+    )
+  };
+}
+
+const drivers = {
+  DOM: makeDOMDriver('.app') <7>
+}
+
+run(main, drivers); <8>
+----
+<1> The central function that contains all the logic to map sources to sinks
+<2> Pick the element(s) of class `add`
+<3> Listen to `click` events
+<4> Emit a `1` for every click
+<5> Sum the emitted numbers, effectively increasing by 1 each time
+<6> Create a DOM element from the counter data
+<7> Declare the DOM driver and define the `app` element as the insertion point
+<8> Run the application with provided drivers
+
+This example also visualizes the natural split of application code written for Cycle.js into
+
+* intent (`add$`),
+* model (`count$`) and
+* view (return value).
+
+The user's _intention_ when clicking the button is to add `1` to the counter.
+The application _model_ increases the stored counter state by the given change value stepwise.
+The _view_ displays the dynamic numbers and static interaction options to the user.
+
+The code also shows some inherent benefits of writing isolated, referentially transparent code
+that interfaces only with drivers according to the Cycle.js architecture.
+The code is automatically reusable as a component in another part of a larger Cycle.js application <<Cy-Comp>>,
+because the declared driver can simply be replaced by another driver instance for other use cases.
+The code is also easy to test by mocking the drivers,
+providing mock sources and performing assertions on emitted sink values.
+A recent effort has been made to outsource component execution to web workers running on separate threads,
+communicating with the main UI thread using a modified DOM driver <<Cy-SB>>.
+This procedure is highly unusual for web frontends and hard to realize with most other framework architectures,
+because many architectures demand significantly more boundary points where the DOM is accessed.
+Additional tooling, either included in the Cycle.js codebase, or maintained by community members, is available
+to simplify common tasks in the Cycle.js ecosystem, including component usage and testing.
