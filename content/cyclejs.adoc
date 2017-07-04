@@ -1,3 +1,5 @@
+<<<
+
 == The Cycle.js framework
 
 _Cycle.js_ is a JavaScript framework created by André "Staltz" Medeiros,
@@ -30,6 +32,8 @@ With all side effects extracted to drivers, only one duty remains for the applic
 Mapping from provided sources to sinks according to the business logic of the desired program.
 <<cycle-example,{figure-caption} {counter:refnum}>> shows an example of a simple Cycle.js application
 that implements a counter using the DOM driver.
+
+<<<
 
 [#cycle-example,source,javascript]
 .{figure-caption} {counter:refnum}. A simple counter written using Cycle.js <<Cy-Tri>>

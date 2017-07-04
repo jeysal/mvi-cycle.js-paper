@@ -74,6 +74,8 @@ segregated into inputs and outputs of the program and relocated to sources and s
 The operators used to encode the desired logic on observables often resemble those known from
 the classic theory of functional reactive programming.
 
+<<<
+
 [#observable-timer,source,javascript]
 .{figure-caption} {counter:refnum}. An example of a timer implemented using observables
 ----
