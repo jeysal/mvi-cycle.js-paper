@@ -2,7 +2,7 @@
 
 :numbered:
 :sectnumlevels: 6
-:toclevels: 3
+:toclevels: 1
 :toc:
 
 :icons: font
