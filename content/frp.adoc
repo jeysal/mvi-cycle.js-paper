@@ -1,4 +1,4 @@
-== Functional reactive programming in imperative languages
+== Functional and reactive programming in imperative languages
 
 Functional reactive programming, commonly known as _FRP_,
 relies on the core concepts of _behaviors_ and _events_ <<WH00>>.

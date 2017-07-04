@@ -36,7 +36,7 @@ including `map` and `filter` known from functional programming as of ECMAScriptÂ
 
 === Current development of functional and reactive programming
 
-Functional and reactive programming is a less well-known and much more recent trend, but there are also cases where it has been successfully used
+Functional and reactive programming is a less well-known paradigm and much more recent trend, but there are also cases where it has been successfully used
 for building large-scale systems, for instance parallel API request processing at Netflix, Inc. <<CH13>>.
 
 In web frontend development, reactive and mostly functional and reactive programming has been getting a lot of attention over the past few years.

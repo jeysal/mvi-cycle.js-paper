@@ -6,9 +6,9 @@ _Cycle.js_ is a JavaScript framework created by André "Staltz" Medeiros,
 who has also been a frequent contributor to the RxJS library <<Rx-Staltz>>.
 It does not mandate use of the MVI architecture,
 but the concept of MVI has emerged in conjunction with Cycle.js and
-is beneficial to most Cycle.js applications,
+is beneficial to most applications that use it,
 with those also being the single field where MVI has been applied so far.
-Cycle.js is lightweight when compared to large frameworks such as Angular and
+The framework and especially its core is lightweight when compared to large frameworks such as Angular and
 can be viewed as more of a tool to assist in creation of MVI applications <<STA15>>.
 
 Cycle.js aims to provide "a functional and reactive JavaScript framework for predictable code" <<GH-Cycle>>.

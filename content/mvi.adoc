@@ -9,7 +9,7 @@ often suggesting _Model-View-ViewModel (MVVM)_ as an appropriate backing concept
 but ultimately, no classification could be applied in general.
 AngularJS lead developer Igor Minar has declared it to be _"Model-View-Whatever" (MVW / MV*)_
 in an effort to end debates in favor of framework users' freedom to follow any approach
-they deem benefical to their application architectures <<MIN12>>.
+they deem beneficial to their application architectures <<MIN12>>.
 
 In our reactive architecture, MVC cannot serve as the underlying pattern either,
 because the controller is a proactive component <<Cy-MVI>>.

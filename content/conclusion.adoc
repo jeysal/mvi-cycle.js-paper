@@ -6,7 +6,7 @@ Cycle.js maxes out simplicity in comparison to component models of any other fra
 by using nothing but plain functions throughout the entire application.
 As the ecosystem grows and comes to fully utilize the benefits of its clean architecture,
 this will likely turn into a competitive advantage, especially in applications with
-lots of realtime aspects and user interaction.
+lots of real-time aspects and user interaction.
 
 Cycle.js also goes all the way on employment of functional and reactive programming libraries,
 much more so than even the newer Angular framework does.
@@ -21,5 +21,5 @@ arguments to and return values of the intent, model and view functions.
 Because of this, additional application outside of Cycle.js could be hard to find.
 But unidirectional data flow will continue to replace bidirectional data flow in frontend development,
 now that even Angular has dropped the latter mechanic from its predecessor AngularJS;
-and whereever data travels this way, the task that comes up is always
+and wherever data travels this way, the task that comes up is always
 to convert from user intent to application model change and, finally, view feedback.
