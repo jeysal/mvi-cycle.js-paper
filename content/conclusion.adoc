@@ -1,5 +1,25 @@
 == Conclusion
 
-=== The future of FRP in frontend development
+The amount of popularity the lightweight React library gained as AngularJS became fatigued
+can also partially be attributed to a general embracement of simplicity in tooling for web frontends.
+Cycle.js maxes out simplicity in comparison to component models of any other framework or library
+by using nothing but plain functions throughout the entire application.
+As the ecosystem grows and comes to fully utilize the benefits of its clean architecture,
+this will likely turn into a competitive advantage, especially in applications with
+lots of realtime aspects and user interaction.
 
-=== Evaluation of the MVI pattern
+Cycle.js also goes all the way on employment of functional and reactive programming libraries,
+much more so than even the newer Angular framework does.
+It remains to be seen if this style of programming continues expansion in frontend development.
+While it allows expressing the semantics of certain types of data flow in an unprecedentedly concise way,
+there is a large entry barrier for developers to embrace the approach
+because of its fundamental differences from traditional styles of programming.
+
+The Model-View-Intent pattern may in a narrow sense be tied to the utilization of observable streams,
+acting as a bridge between human and computer as well as constituting
+arguments to and return values of the intent, model and view functions.
+Because of this, additional application outside of Cycle.js could be hard to find.
+But unidirectional data flow will continue to replace bidirectional data flow in frontend development,
+now that even Angular has dropped the latter mechanic from its predecessor AngularJS;
+and whereever data travels this way, the task that comes up is always
+to convert from user intent to application model change and, finally, view feedback.
