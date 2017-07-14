@@ -88,7 +88,7 @@ Available at https://www.ecma-international.org/ecma-262/5.1/.
 * [[[CH13]]]
 Ben Christensen, Jafar Husain,
 "Reactive Programming in the Netflix API with RxJava",
-Netflix Inc., Los Gatos, California, USA, 2013.
+Netflix, Inc., Los Gatos, California, USA, 2013.
 Blog post available at http://web.archive.org/web/20170516092032/https://medium.com/netflix-techblog/reactive-programming-in-the-netflix-api-with-rxjava-7811c3a1496a.
 * [[[GH-Redux]]]
 Github project page of the Redux state management library,

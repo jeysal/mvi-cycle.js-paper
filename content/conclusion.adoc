@@ -19,7 +19,7 @@ The Model-View-Intent pattern may in a narrow sense be tied to the utilization o
 acting as a bridge between human and computer as well as constituting
 arguments to and return values of the intent, model and view functions.
 Because of this, additional application outside of Cycle.js could be hard to find.
-But unidirectional data flow will continue to replace bidirectional data flow in frontend development,
+But unidirectional data flow will likely continue to replace bidirectional data flow in frontend development,
 now that even Angular has dropped the latter mechanic from its predecessor AngularJS;
 and wherever data travels this way, the task that comes up is always
 to convert from user intent to application model change and, finally, view feedback.

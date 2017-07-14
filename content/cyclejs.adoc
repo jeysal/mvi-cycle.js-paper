@@ -28,8 +28,8 @@ In the MVI data flow, drivers are located before the intent (sources) and after 
 interfacing with application code on one side and the external part of the system on the other -
 for instance the user in case of the DOM driver or another computer in case of the HTTP driver.
 
-With all side effects extracted to drivers, only one duty remains for the application code to fulfill:
-Mapping from provided sources to sinks according to the business logic of the desired program.
+With all side effects extracted to drivers, only one duty remains for the application code to fulfill -
+mapping from provided sources to sinks according to the business logic of the desired program.
 <<cycle-example,{figure-caption} {counter:refnum}>> shows an example of a simple Cycle.js application
 that implements a counter using the DOM driver.
 
@@ -77,13 +77,13 @@ This example also visualizes the natural split of application code written for C
 * model (`count$`) and
 * view (return value).
 
-The user's _intention_ when clicking the button is to add `1` to the counter.
+The user's _intent_ when clicking the button is to add `1` to the counter.
 The application _model_ increases the stored counter state by the given change value stepwise.
 The _view_ displays the dynamic numbers and static interaction options to the user.
 
 The code also shows some inherent benefits of writing isolated, referentially transparent code
 that interfaces only with drivers according to the Cycle.js architecture.
-The code is automatically reusable as a component in another part of a larger Cycle.js application <<Cy-Comp>>,
+The code is automatically reusable as a component in a part of a larger Cycle.js application <<Cy-Comp>>,
 because the declared driver can simply be replaced by another driver instance for other use cases.
 The code is also easy to test by mocking the drivers,
 providing mock sources and performing assertions on emitted sink values.

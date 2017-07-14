@@ -25,14 +25,14 @@ seem to lose momentum <<GTREND-EmberBckbn>> as their ideas are drifting towards 
 While functional programming is not a new paradigm and it has been prominent in academia for decades,
 only recently adoption of its principles has found its way into practical applications in the software industry.
 
-WhatsApp Inc. is known to use the functional programming language Erlang for most of its high load message processing <<REE12>>.
+WhatsApp, Inc. is known to use the functional programming language Erlang for most of its high load message processing <<REE12>>.
 The hybrid OOP and functional language Scala has grown to large popularity <<OGR17>>
 and has frequently been used for implementing backend systems at Twitter, Inc. <<VEN09>> and Zalando SE <<KOP15>> among others.
 Even classic imperative and object-oriented languages have commonly adopted functional programming concepts
-into language features and their core libraries, such as industry heavyweight Java adopting lambda expressions
+into language features and their core libraries, such as industry heavyweight Java introducing lambda expressions
 and incorporating the Streams API into the platform <<GOE14>>, as well as the web's core language JavaScript
 supporting arrow functions as part of the ECMAScript® 2015 standard <<ECM15>> and earlier introducing typical collection operations
-including `map` and `filter` known from functional programming as of ECMAScript® 5.1 <<ECM11>>.
+including `map` and `filter` known from functional programming in ECMAScript® 5.1 <<ECM11>>.
 
 === Current development of functional and reactive programming
 
@@ -41,23 +41,25 @@ for building large-scale systems, for instance parallel API request processing a
 
 In web frontend development, reactive and mostly functional and reactive programming has been getting a lot of attention over the past few years.
 In the React ecosystem, Redux (30,955 Github stars <<GH-Redux>>) is an immensely popular choice for application state management
-that, while not explicitly being marketed as functional and reactive, clearly takes lots of inspiration from the paradigms.
+that - while not explicitly being communicated as functional and reactive - clearly takes lots of inspiration from the paradigms.
 Its largest competitor, MobX (9,130 Github stars <<GH-MobX>>) claims to
 "make state management simple and scalable by transparently applying functional reactive programming" <<GH-MobX>>.
 
 While Redux and other state management libraries are significantly less popular outside of the React ecosystem <<GRE16>>,
 the frameworks usually have own distinct equivalents available, namely `@ngrx/store` for Angular and `vuex` for Vue.js.
 Angular itself has added the reactive programming library RxJS as one of just two dependencies of the core framework <<GH-ng>>.
-Elm is a functional programming language focused on web development with JavaScript as a compilation target
-that provides syntax features suitable for reactive code.
-Despite remaining a niche phenomenon for now, it has recently seen an increase in interest <<GTREND-Elm>>.
+Elm is a functional programming language focused on web development with JavaScript as a compilation target.
+It provides syntax features suitable for reactive code, and despite remaining a niche phenomenon for now,
+it has recently seen an increase in interest <<GTREND-Elm>>.
 
 Overall, with functional and reactive concepts sneaking into the world of JavaScript,
 we may very soon see not just the establishment of another fraction in the highly diverse and fragmented ecosystem of web applications,
 but a general paradigm change taking over the ecosystem from all corners at once.
 
-If functional and reactive programming is the future of frontend web development - with Redux and RxJS being just early harbingers -
-how will we structure our code in future web applications? What will be the next MV* architecture once we are fully committed to FRP?
+If functional and reactive programming is the future of frontend web development -
+with Redux and RxJS being just early harbingers -
+how will we structure our code in future web applications?
+What will be the next MV* architecture once we are fully committed to functional and reactive programming?
 
 After introducing basic functional reactive programming concepts and the Model-View-Intent architecture in the following sections of this paper,
-we will take a look at the MVI realization in the Cycle.js framework before closing with a conclusion and outlook.
+we will take a look at the MVI realization in the Cycle.js framework before closing with a conclusion and an outlook.

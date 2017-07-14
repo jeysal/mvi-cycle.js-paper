@@ -58,9 +58,9 @@ by replacing both mouse clicks and screen depiction with spoken words <<STA15>>.
 In the same way, the model can illustrate computer-computer-interaction between reactive systems
 via data packets sent over their event bus.
 
-Another useful property of the MVI architecture is that every component it essentially just
+Another useful property of the MVI architecture is that every component is essentially just
 a referentially transparent function over streams <<Cy-MVI>>.
 Intent, model and view could - in theory - be consolidated into a single function,
-although the split in those three components is indispensably useful for comprehensibility of a program.
+although the split into those three components is indispensably useful for comprehensibility of a program.
 At the same time, they can advantageously be split up into an arbitrary amount of functions separated by concerns,
 enhancing clarity and facilitating composability of MVI programs.
