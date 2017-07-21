@@ -10,6 +10,8 @@ for modeling discrete-time events in human-computer-interaction and
 take a look at how the clean and simple architecture of the Cycle.js framework
 enables utilization of the pattern to create web applications fundamentally based on observables.
 
+[HTML and PDF renders](https://jeysal.github.io/mvi-cycle.js-paper/)
+
 ## License
 
 [![CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png) Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
